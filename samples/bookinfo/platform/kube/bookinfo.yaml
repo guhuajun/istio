@@ -23,9 +23,11 @@ metadata:
     app: details
     service: details
 spec:
+  type: NodePort
   ports:
   - port: 9080
     name: http
+    nodePort: 30101
   selector:
     app: details
 ---
@@ -62,9 +64,11 @@ metadata:
     app: ratings
     service: ratings
 spec:
+  type: NodePort
   ports:
   - port: 9080
     name: http
+    nodePort: 30102
   selector:
     app: ratings
 ---
@@ -101,9 +105,11 @@ metadata:
     app: reviews
     service: reviews
 spec:
+  type: NodePort
   ports:
   - port: 9080
     name: http
+    nodePort: 30103
   selector:
     app: reviews
 ---
@@ -184,9 +190,11 @@ metadata:
     app: productpage
     service: productpage
 spec:
+  type: NodePort
   ports:
   - port: 9080
     name: http
+    nodePort: 30104
   selector:
     app: productpage
 ---
